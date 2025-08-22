@@ -27,26 +27,27 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <form method="POST" action="create.php">
 
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" required>
+        <label for="nome" id="labels">Nome:</label>
+        <input type="text" name="nome" required id="inputs">
 
-        <label for="posicao">Posição:</label>
-        <input type="search" required>
+        <label for="posicao" id="labels">Posição:</label>
+        <input type="search" required id="inputs">
 
-        <label for="time">Time:</label>
-        <input type="search" required>
+        <label for="time" id="labels">Time:</label>
+        <input type="search" required id="inputs">
 
         <input type="submit" value="Adicionar">
 
     </form>
 
-    <a href="read.php">Ver registros.</a>
+    <a href="index.php" id="link">Voltar para a página inicial</a>
 
 </body>
 

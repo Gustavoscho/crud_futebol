@@ -42,13 +42,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Partida</title>
 </head>
+<link rel="stylesheet" href="style.css">
 
 <body>
     <h2>Cadastrar Nova Partida</h2>
 
     <form method="POST" action="create_partida.php">
-        <label for="time_casa_id">Time da Casa:</label>
-        <select name="time_casa_id" required>
+        <label for="time_casa_id" id="labels">Time da Casa:</label>
+        <select name="time_casa_id" required id="inputs">
             <option value="">Selecione o time da casa</option>
             <?php foreach ($times as $time): ?>
                 <option value="<?php echo $time['id']; ?>"><?php echo $time['nome']; ?></option>
@@ -56,8 +57,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </select>
         <br><br>
 
-        <label for="time_fora_id">Time Visitante:</label>
-        <select name="time_fora_id" required>
+        <label for="time_fora_id" id="labels">Time Visitante:</label>
+        <select name="time_fora_id" required id="inputs">
             <option value="">Selecione o time visitante</option>
             <?php foreach ($times as $time): ?>
                 <option value="<?php echo $time['id']; ?>"><?php echo $time['nome']; ?></option>
@@ -65,22 +66,22 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </select>
         <br><br>
 
-        <label for="data_jogo">Data do Jogo:</label>
-        <input type="date" name="data_jogo" required>
+        <label for="data_jogo" id="labels">Data do Jogo:</label>
+        <input type="date" name="data_jogo" required id="inputs">
         <br><br>
 
-        <label for="gols_casa">Gols do Time da Casa:</label>
-        <input type="number" name="gols_casa" min="0" value="0" required>
+        <label for="gols_casa" id="labels">Gols do Time da Casa:</label>
+        <input type="number" name="gols_casa" min="0" value="0" required id="inputs">
         <br><br>
 
-        <label for="gols_fora">Gols do Time Visitante:</label>
-        <input type="number" name="gols_fora" min="0" value="0" required>
+        <label for="gols_fora" id="labels">Gols do Time Visitante:</label>
+        <input type="number" name="gols_fora" min="0" value="0" required id="inputs">
         <br><br>
 
-        <input type="submit" value="Cadastrar Partida">
+        <input type="submit" value="Finalizar">
     </form>
 
     <br>
-    <a href="index.php">Voltar para página inicial</a>
+    <a href="index.php" id="links">Voltar para página inicial</a>
 </body>
 </html>
