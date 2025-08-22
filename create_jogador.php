@@ -33,11 +33,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     <form method="POST" action="create.php">
 
-        <label for="name">Nome:</label>
-        <input type="text" name="name" required>
+        <label for="nome">Nome:</label>
+        <input type="text" name="nome" required>
 
-        <label for="email">Email:</label>
-        <input type="email" name="email" required>
+        <label for="posicao">Posição:</label>
+        <input type="search" required>
+
+        <label for="time">Time:</label>
+        <input type="search" required>
 
         <input type="submit" value="Adicionar">
 
