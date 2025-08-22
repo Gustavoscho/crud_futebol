@@ -1,1 +1,16 @@
 /*Esse CSS é só pra fazer as funçoes que o sor pediu na documentação */
+
+#link{
+    padding: 5px;
+    color: chocolate;
+}
+
+#inputs{
+    background-color: blanchedalmond;
+    
+}
+
+#labels{
+    font-weight: bold;
+    font-family:Arial, Helvetica, sans-serif
+}
